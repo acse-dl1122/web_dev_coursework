@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vapour</title>
+    <!-- reference to the style sheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+
+
+
+
+<!-- body section of the website -->
+<body>
+
+
+
+    <!-- navigation bar section, stick on the top of the page-->
+    <nav class="navbar">
+        
+        <!-- a container with all the navigation elements -->
+        <div class="navbar_container">
+            <!-- logo and vapour text, both logo and text link to this home page -->
+            <a href="index.html" id="navbar_logo">
+                <img src="images/vapour logo.png" alt="Vapour logo image" width="60" height="60">Vapour
+            </a>
+
+
+
+            <!-- toggle for mobile version, list the menu -->
+            <div class="navbar_toggle" id="mobile_menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+
+
+            <!-- navigation bar for pc and tablet, present as a list -->
+            <ul class="navbar_menu">
+                <!-- links on the navigation bar -->
+                <li class="navbar_item">
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="games.html" class="navbar_links">Games</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="news.html" class="navbar_links">News</a>
+                </li>   
+                <li class="navbar_btn">
+                    <a href="report.html" class="button">Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- features and recommended section, with rolling poster, controlled by js -->
+    <div class="slideshow_container">
+        <!-- images on the slider -->
+        <div class="image_container">
+            <img src="images/slider 1.jpg" class="image fade" alt="game cover: cyberpunk 2077">
+        </div>
+        <div class="image_container">
+            <img src="images/slider 2.jpeg" class="image fade" alt="game cover: hades">
+        </div>
+        <div class="image_container">
+            <img src="images/slider 3.jpg" class="image fade" alt="game cover: the witcher 3">
+        </div>
+        <div class="image_container">
+            <img src="images/slider 4.jpg" class="image fade" alt="game cover: league of legends">
+        </div>
+        <div class="image_container">
+            <img src="images/slider 5.jpg" class="image fade" alt="game cover: hollow knight">
+        </div>
+        
+        <!-- buttons to control the slider -->
+        <a class="prev_btn" onclick="next_slide(-1)">&#10094;</a>
+        <a class="next_btn" onclick="next_slide(1)">&#10095;</a>
+        
+        <!-- dots below the slider indicate which image is shown, also clickable -->
+        <div class="dot-container">
+          <span class="dot" onclick="current_slide(1)"></span>
+          <span class="dot" onclick="current_slide(2)"></span>
+          <span class="dot" onclick="current_slide(3)"></span>
+          <span class="dot" onclick="current_slide(4)"></span>
+          <span class="dot" onclick="current_slide(5)"></span>
+        </div>
+    </div>
+    
+
+
+
+    <!-- recommanded for you section, displayed as cards -->
+    <div class="rec">
+        <!-- title -->
+        <h1>Recommanded for you</h1>
+        <!-- 3 card containers -->
+        <div class="rec_container">
+            <!-- clickable card, direct to the game detail page -->
+            <div class="rec_card" onclick="location.href='eastward.html';" style="cursor: pointer;">
+                <div class="text">EASTWARD</div>
+                <button>Get Details</button>
+            </div> 
+            <div class="rec_card">
+                <div class="text">BABA IS YOU</div>
+                <button>Get Details</button>
+            </div>
+            <div class="rec_card">
+                <div class="text">VA-11 HALL-A</div>
+                <button>Get Details</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer_content">
+            <h2>Vapour Community</h2>
+            <p>
+                Depends what concept you are symbolically representing with "pattern". You wrote "design is subset of pattern" - nobody knows what concept you are projecting.
+            </p>
+            <!-- social media icons -->
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+            </ul>
+        </div>
+        <!-- copyright section -->
+        <div class="footer_bottom">
+            <p>copyright &copy;2021 Vapour. Designed by <span>Yiding Luo</span></p>
+        </div>
+    </footer>
+
+    <!-- calling the java script file -->
+    <script src = "scripts/index.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <!-- reference to the style sheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+
+
+
+
+<!-- body section of the website -->
+<body>
+
+
+
+    <!-- navigation bar section, stick on the top of the page-->
+    <nav class="navbar">
+        
+        <!-- a container with all the navigation elements -->
+        <div class="navbar_container">
+            <!-- logo and vapour text, both logo and text link to this home page -->
+            <a href="index.html" id="navbar_logo">
+                <img src="images/vapour logo.png" alt="Vapour logo image" width="60" height="60">Vapour
+            </a>
+
+
+
+            <!-- toggle for mobile version, list the menu -->
+            <div class="navbar_toggle" id="mobile_menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+
+
+            <!-- navigation bar for pc and tablet, present as a list -->
+            <ul class="navbar_menu">
+                <!-- links on the navigation bar -->
+                <li class="navbar_item">
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="games.html" class="navbar_links">Games</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="news.html" class="navbar_links">News</a>
+                </li>   
+                <li class="navbar_btn">
+                    <a href="report.html" class="button">Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- game gallery section, contains all the games present as a gallery and with a filter -->
+
+    <section class="gallery">
+        <div class="container">
+            <div class="row">  
+                <div class="gallery_filter">
+                    <span class="filter_item active" data-filter="all">all</span>
+                    <span class="filter_item" data-filter="action">action</span>
+                    <span class="filter_item" data-filter="casual">casual</span>
+                    <span class="filter_item" data-filter="sports">sports</span>
+                    <span class="filter_item" data-filter="rpg">rpg</span>
+                </div>
+            </div>
+            <div class="row">
+                <!-- gallery images, divided into 4 section -->
+
+                <!-- action games -->
+                <div class="gallery_item action">
+                    <div class="gallery_item_inner">
+                        <img src = "images/action 1.jpg" alt="actioin game, game cover: skul the hero slayer">
+                    </div>
+                </div>
+                <div class="gallery_item action">
+                    <div class="gallery_item_inner">
+                        <img src = "images/action 2.jpg" alt="actioin game, game cover: space-gladiators">
+                    </div>
+                </div>
+                <div class="gallery_item action">
+                    <div class="gallery_item_inner">
+                        <img src = "images/action 3.jpg" alt="actioin game, game cover: curse of the dead gods">
+                    </div>
+                </div>
+                <div class="gallery_item action">
+                    <div class="gallery_item_inner">
+                        <img src = "images/action 4.jpg" alt="actioin game, game cover: music">
+                    </div>
+                </div>
+                
+                <!-- casual games -->
+                <div class="gallery_item casual">
+                    <div class="gallery_item_inner">
+                        <img src = "images/casual 1.jpg" alt="casual game, game cover: cyanide & happiness-freakpocalypse">
+                    </div>
+                </div>
+                <div class="gallery_item casual">
+                    <div class="gallery_item_inner">
+                        <img src = "images/casual 2.jpg" alt="casual game, game cover: pile up-box by box">
+                    </div>
+                </div>
+                <div class="gallery_item casual">
+                    <div class="gallery_item_inner">
+                        <img src = "images/casual 3.jpg" alt="casual game, game cover: press ctrl">
+                    </div>
+                </div>
+                
+                <!-- sports games -->
+                <div class="gallery_item sports">
+                    <div class="gallery_item_inner">
+                        <img src = "images/sports 1.jpg" alt="sports game, game cover: track dry">
+                    </div>
+                </div>
+                <div class="gallery_item sports">
+                    <div class="gallery_item_inner">
+                        <img src = "images/sports 2.jpg" alt="sports game, game cover: mad ball">
+                    </div>
+                </div>
+                <div class="gallery_item sports">
+                    <div class="gallery_item_inner">
+                        <img src = "images/sports 3.jpg" alt="sports game, game cover: rugby challenge 4">
+                    </div>
+                </div>
+
+                <!-- rpg games -->
+                <div class="gallery_item rpg">
+                    <div class="gallery_item_inner">
+                        <img src = "images/rpg 1.jpg" alt="rpg game, game cover: star dynasties">
+                    </div>
+                </div>
+                <div class="gallery_item rpg">
+                    <div class="gallery_item_inner">
+                        <img src = "images/rpg 2.jpg" alt="rpg game, game cover: the elder scrolls">
+                    </div>
+                </div>
+                <div class="gallery_item rpg">
+                    <div class="gallery_item_inner">
+                        <img src = "images/rpg 3.jpg" alt="rpg game, game cover: assassin's creed odyssey">
+                    </div>
+                </div>
+                <div class="gallery_item rpg">
+                    <div class="gallery_item_inner">
+                        <img src = "images/rpg 4.jpg" alt="rpg game, game cover: cyberpunk 2077">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer_content">
+            <h2>Vapour Community</h2>
+            <p>
+                Depends what concept you are symbolically representing with "pattern". You wrote "design is subset of pattern" - nobody knows what concept you are projecting.
+            </p>
+            <!-- social media icons -->
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+            </ul>
+        </div>
+        <!-- copyright section -->
+        <div class="footer_bottom">
+            <p>copyright &copy;2021 Vapour. Designed by <span>Yiding Luo</span></p>
+        </div>
+    </footer>
+
+    <!-- calling the java script file -->
+    <script src = "scripts/games.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Crossing</title>
+    <!-- reference to the style sheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+
+
+
+<!-- body section of the website -->
+<body>
+
+
+
+    <!-- navigation bar section, stick on the top of the page-->
+    <nav class="navbar">
+        
+        <!-- a container with all the navigation elements -->
+        <div class="navbar_container">
+            <!-- logo and vapour text, both logo and text link to this home page -->
+            <a href="index.html" id="navbar_logo">
+                <img src="images/vapour logo.png" alt="Vapour logo image" width="60" height="60">Vapour
+            </a>
+
+
+
+            <!-- toggle for mobile version, list the menu -->
+            <div class="navbar_toggle" id="mobile_menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+
+
+            <!-- navigation bar for pc and tablet, present as a list -->
+            <ul class="navbar_menu">
+                <!-- links on the navigation bar -->
+                <li class="navbar_item">
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="games.html" class="navbar_links">Games</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="news.html" class="navbar_links">News</a>
+                </li>   
+                <li class="navbar_btn">
+                    <a href="report.html" class="button">Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- main news artical   -->
+    <div class="animal_crossing">
+        <!-- introduction section, above the images slider -->
+        <div class="introduction">
+            <h1>Animal Crossing: New Horizons Gets Mario Items</h1>
+            <p class="fonts_size_changes">
+                <span class="small" id="small_a">A</span>
+                <span class="medium" id="medium_a">A</span>
+                <span class="large" id="large_a">A</span>
+            </p>
+            <p>As it comes up on the game's one-year anniversary, Nintendo has announced that Animal Crossing: New Horizons is celebrating the 35th anniversary of Super Mario Bros. with a plethora of Mario-themed items and costumes in-game.</p>
+            <p>In the February 2021 Nintendo Direct, Nintendo showed off the free update dropping in the game on February 25, which includes costumes for Mario, Luigi, Peach, and Wario (but no Waluigi to be seen), as well as Mario-themed furniture items like coins, Thwomps, various Blocks, mushrooms, and Warp Pipes that let you travel between two points on your island instantly.</p>
+            <p>These updates come alongside a number of other celebrations for Mario's 35th's anniversary, which has included multiple limited-time game releases and a set of commemorative pins that are annoyingly difficult to get.</p>
+            <h2>Animal Crossing: New Horizons Super Mario Items</h2>
+        </div>
+
+        <!-- images slider, after the introduction section -->
+        <div class="images_container">
+            <ul>
+                <li><img src="images/animal/1.jpg" alt="animal crossing free update poster, avaliable February 25th"></li>
+                <li><img src="images/animal/2.jpg" alt="animal crossing in-game mario cosplay items"></li>
+                <li><img src="images/animal/3.jpg" alt="animal crossing in-game mario edition structures"></li>
+                <li><img src="images/animal/4.jpg" alt="animal crossing in-game mario pipes and flags"></li>
+                <li><img src="images/animal/5.jpg" alt="animal crossing in-game shop items"></li>
+                <!-- big sliding images, more details in css -->
+                <li class="bigImg"></li>
+                <!-- moving frame -->
+                <li class="frame"></li>
+            </ul>
+        </div>
+
+
+        <!-- summary section, after the images slider -->
+        <div class="summary">
+            <p>Animal Crossing's most recent event was Festivale, a Mardi Gras-themed event on February 15 that included new outfits, furniture, reactions, and the visitation of the special peacock NPC Pavé, who sends players on feather-collecting missions for themed rewards.</p>
+            <p>Assuming the annual cycle of events repeats, more events will be on the way in the comings months. New Horizons players will be coming up on the first two repeat events in April: Cherry Blossoms and the much-loathed Easter-themed Bunny Day celebration.</p>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer_content">
+            <h2>Vapour Community</h2>
+            <p>
+                Depends what concept you are symbolically representing with "pattern". You wrote "design is subset of pattern" - nobody knows what concept you are projecting. 
+            </p>
+            <!-- social media icons -->
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+            </ul>
+        </div>
+        <!-- copyright section -->
+        <div class="footer_bottom">
+            <p>copyright &copy;2021 Vapour. Designed by <span>Yiding Luo</span></p>
+        </div>
+    </footer>
+
+    <!-- calling the java script file -->
+    <script src = "scripts/animal.js"></script>
+
+
+
+</body>
+</html>

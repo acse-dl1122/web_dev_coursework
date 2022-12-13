@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastward</title>
+    <!-- reference to the style sheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+
+
+
+
+<!-- body section of the website -->
+<body>
+
+
+
+    <!-- navigation bar section, stick on the top of the page-->
+    <nav class="navbar">
+        
+        <!-- a container with all the navigation elements -->
+        <div class="navbar_container">
+            <!-- logo and vapour text, both logo and text link to this home page -->
+            <a href="index.html" id="navbar_logo">
+                <img src="images/vapour logo.png" alt="Vapour logo image" width="60" height="60">Vapour
+            </a>
+
+
+
+            <!-- toggle for mobile version, list the menu -->
+            <div class="navbar_toggle" id="mobile_menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+
+
+            <!-- navigation bar for pc and tablet, present as a list -->
+            <ul class="navbar_menu">
+                <!-- links on the navigation bar -->
+                <li class="navbar_item">
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="games.html" class="navbar_links">Games</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="news.html" class="navbar_links">News</a>
+                </li>   
+                <li class="navbar_btn">
+                    <a href="report.html" class="button">Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- game details section -->
+    <div class="eastward">
+        <!-- main game image and title -->
+        <div class="title">
+            <!-- background video, muted and auto play at the background -->
+            <video id="background_video" autoplay="" muted="" loop="" playsinline="">
+                <source src="videos/eastward background.mp4" type="video/mp4"  alt="eastward gameplay video">
+            </video>
+            <!-- game title -->
+            <h1>Eastward</h1>
+        </div>
+
+        <!-- game introduction and details -->
+        <div class="row">
+            <!-- side section, stack as a row when in small screen, above the main section -->
+            <div class="side">
+                <h2>About this game</h2>
+                <!-- click to changes font size -->
+                <p class="fonts_size_changes">
+                    <span class="small" id="small_a">A</span>
+                    <span class="medium" id="medium_a">A</span>
+                    <span class="large" id="large_a">A</span>
+                </p>
+                <video id="main_video" controls>
+                    <source src="videos/eastward main.mp4" type="video/mp4"  alt="eastward gameplay trailer">
+                </video>
+                <div class="content">
+                    <p>Eastward is a beautifully detailed and charming adventure game, from Shanghai-based indie developers, Pixpil.</p>
+                    <br>
+                    <p>In the near-future, society is starting to collapse, and the human population is at an all-time low. A deadly toxic presence has spread across the land, destroying and devouring everything in its path.</p>
+                    <br>
+                    <p>Those who could escape the miasma flocked to underground villages to start a new life. But for a hardworking miner and a mysterious young girl, the hope of a thriving outside world beckons…</p>
+                    <br>
+                    <p>Escape the tyrannical clutches of Sandfill’s subterranean society and join Eastward’s unlikely duo on an exciting adventure to the land above! Discover beautiful yet bizarre settlements and make new friends as you travel across the world by rail.</p>
+                    <br>
+                    <p>Contains adult humour and some mature themes.</p>
+                </div>
+            </div>
+
+            <!-- game details main section, sit on the right side of the scree. when in small screen, sit after the side section-->
+            <div class="main">
+                <img src="images/eastward/GIFTravelTheWorld.gif" alt="eastward game feature: travel the world">
+                <p>Discover the wonderfully weird world of Eastward. Climb aboard the cross-country railway which spans this decaying continent, stopping off to explore its bustling towns, curious campsites and shady forests.
+                </p>
+                <br>
+                <img src="images/eastward/GIFFightOrFry2.gif" alt="eastward game feature: fight or fry">
+                <p>Fend off peculiar monsters and ferocious bosses with John’s weapon of choice - be it a flamethrower, cog-shooter or your trusty ol’ frying pan. Feeling merciful? Try temporarily stunning them with Sam’s kinetic blast.</p>
+                <br>
+                <img src="images/eastward/GIFMixThingsUp2.gif" alt="eastward game feature: mix things up">
+                <p>Switch between John and Sam to solve environmental puzzles and fight your way through formidable dungeons. Separate the duo to unlock hidden paths or stick together as you traverse a perilous landscape.</p>
+                <br>
+                <img src="images/eastward/GIFSmallTownLife2.gif" alt="eastward game feature: small town life">
+                <p>Get to know a quirky cast of characters with oodles of personality! Immerse yourself in a heartwarming story-driven adventure, packed with fun and wacky humour.</p>
+                <br>
+                <img src="images/eastward/AlFrescoDining_EN.gif" alt="eastward game feature: ai fresco dining">
+                <p>Create deliciously authentic Eastwardian cuisine using (mostly) fresh, organic ingredients from toxic forests, potcrab farms and abandoned malls. These delicacies will grant health bonuses, power boosts and secret boons.</p>
+                <br>
+                <img src="images/eastward/GIFRetroBeats2.gif" alt="eastward game feature: retro beats">
+                <p>Bop along to a wonderfully upbeat soundtrack composed by Joel Corelitz (Death Stranding, Hohokum, The Unfinished Swan), with sound design from Irish studio, Hyperduck Soundworks (Dust: An Elysian Tail, Kingdom Rush)</p>
+            </div>
+          </div>
+    </div>
+
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer_content">
+            <h2>Vapour Community</h2>
+            <p>
+                Depends what concept you are symbolically representing with "pattern". You wrote "design is subset of pattern" - nobody knows what concept you are projecting.
+            </p>
+            <!-- social media icons -->
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+            </ul>
+        </div>
+        <!-- copyright section -->
+        <div class="footer_bottom">
+            <p>copyright &copy;2021 Vapour. Designed by <span>Yiding Luo</span></p>
+        </div>
+    </footer>
+
+    <!-- calling the java script file -->
+    <script src = "scripts/eastward.js"></script>
+
+
+
+</body>
+</html>

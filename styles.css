@@ -1,0 +1,1265 @@
+/* ---------------------------------- general styles settings --------------------------------------*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+
+/* ----------------------------------styles for navigation bar section --------------------------------------*/
+
+/* whole nevigation bar styling, positioning on top of the page */
+.navbar{
+    background-color: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* styling for the container, kinda useless here since only one element in this navbar section */
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* the logo text, click to link back to homepage */
+#navbar_logo{
+    background-color: pink;
+    background-image: linear-gradient(to top, white, pink);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* mouse on the logo changes color */
+#navbar_logo:hover{
+    background-image: linear-gradient(to top, white, rgb(209, 110, 127));
+    transition: all 0.3s ease;
+}
+
+/* menu styling */
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+/* each items, inclulde home, games, news and subscribe button */
+.navbar_item{
+    height: 80px;
+}
+
+/* first 3 element in the menu */
+.navbar_links{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+
+/* styling for the button in the nav bar */
+.navbar_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+/* styling for the button */
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: pink;
+    color: white;
+}
+
+/* hover effect on the button, changes color with transition effect */
+.button:hover {
+    background: rgb(209, 110, 127);
+    transition: all 0.3s ease;
+}
+
+/* links hover effect, light up with color and transition effect */
+.navbar_links:hover {
+    color: pink;
+    transition: all 0.3s ease;
+}
+
+/* styles for mobile version */
+@media screen and (max-width: 960px) {
+
+    /* changes scale when small screen */
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    
+    /* decrease in size */
+    .navbar_menu {      
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+    
+    .navbar_menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    /* move logo to left, since the screen gets smaller */
+    #navbar_logo {
+        padding-left: 25px;
+    }
+  
+    
+    /* change menu bar into toggle */
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+    
+    .navbar_item {
+        width: 100%;
+    }
+  
+    .navbar_links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+  
+    .navbar_btn {
+        padding-bottom: 2rem;
+    }
+    
+    /* resize button */
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    
+
+    #mobile_menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+  
+    .navbar_toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+  
+    /* toggle effect, from lines to cross */
+    #mobile_menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #mobile_menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+  
+    #mobile_menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+
+/* ----------------------------------styles for slider section --------------------------------------*/
+
+/* styling for the whole slide show, since there is only container in the slider */
+.slideshow_container{
+    background-color: #131313;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* stack all images on one place */
+.image_container{
+    
+    overflow: hidden;
+}
+
+/* image stylings */
+.image_container .image{
+    width: 100%;
+    max-width: 1600px;
+    max-height: 80%;
+    margin: 1px auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* button stylings */
+.prev_btn , .next_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    margin-top: 22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+    user-select: none;
+    background-color: pink;
+}
+
+/* position next button on the right side */
+.next_btn{
+    right: 0px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+/* hover effect on the button, changes color  */
+.prev_btn:hover , .next_btn:hover{
+    background-color: rgb(209, 110, 127);
+    transition: all 0.3s ease;
+}
+
+/* all the dots, centered position */
+.dot-container{
+    text-align: center;
+}
+
+/* styling the dots, changes to curser when mouse on */
+.dot{
+    position: inherit;
+    top: -40px;
+    height: 8px;
+    width: 36px;
+    background-color: white;
+    border-radius: 0px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1;
+    transition: all .5s;
+}
+
+/* hover effect on dots, change color into pink */
+.slideshow_container .active , .dot:hover{
+    background-color: pink;
+    transition: all 0.3s ease;
+}
+
+
+/* fade effect on the images, zoom out and back to origianl porition, make the website more dynamic */
+.fade{
+    animation: fade 0.3s ease-in-out;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* while in mobile screen */
+@media only screen and (max-width:960px) {
+    /* change the size of the buttons and dots */
+    .prev_btn , .next_btn{
+        padding: 12px;
+        font-size: 18px;
+    }
+    .dot-container{
+        padding: 0px;
+    }
+    .dot{
+        height: 4px;
+        width: 18px;
+    }
+}
+
+
+
+/* ----------------------------------recommend for you section --------------------------------------*/
+
+/* general setting for recommend section */
+.rec{
+    background: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+/* recommanded for you title */
+.rec h1{
+    position: relative;
+    background-color: pink;
+    background-image: linear-gradient(to top, white, pink);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+
+/* game title styling, opacity 0, when hover appear */
+.rec_card .text{
+    opacity:0;
+    position:absolute;
+    top:50%;
+    left:50%;   
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-size:25px;
+    pointer-events:none;
+    z-index:4;
+    transition: .3s ease-in-out;
+    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8);
+    background-color: pink;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+/* show the text when hover */
+.rec_card:hover .text{
+    opacity:1;
+    animation: move-down 0.6s linear;
+    padding:1em;
+    width:100%;
+}
+
+/* recommanded card section styling */
+.rec_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 50px;
+}
+
+/* each recommand card */
+.rec_card{
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-image: url('/images/rec\ 1.png');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+.rec_card:before{
+    opacity: 0.2;
+}
+
+/* recommand card images */
+.rec_card:nth-child(2){
+    background-image: url('/images/rec\ 2.png');
+}
+
+.rec_card:nth-child(3){
+    background-image: url('/images/rec\ 3.png');
+}
+
+/* button on the card */
+.rec_card button{
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: pink;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 1rem;
+}
+
+.rec_card button:hover{
+    cursor: pointer;
+}
+
+/* scale the card when hover, make website more dynamic and interactive */
+.rec_card:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* adjust font size when on mobile screen */
+@media screen and (max-width: 960px) {
+
+    .rec h1 {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ----------------------------------footer section --------------------------------------*/
+
+
+footer{
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: pink;
+    background-color: #131313;
+}
+
+/* styling for the content */
+.footer_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+/* styling for the footer title */
+.footer_content h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    background-color: pink;
+    background-image: linear-gradient(to top, white, pink);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}   
+
+/* styling for the footer information */
+.footer_content p{
+    max-width: 500px;
+    margin-left: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    background-color: pink;
+    background-image: linear-gradient(to top, white, pink);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* social media icoins */
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+/* list of the social media icons */
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+}
+
+/* changes color whne hover */
+.socials a:hover i{
+    color: pink;
+}
+
+/* copyright section */
+.footer_bottom{
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer_bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    background-color: pink;
+    background-image: linear-gradient(to top, white, pink);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer_bottom span{
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+    background-color: pink;
+    background-image: linear-gradient(to top, white, pink);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* changes font size when on smaller screen */
+@media screen and (max-width: 960px) {
+    .footer_content h2{
+        font-size: 2rem;
+    }   
+    
+    .footer_content p{
+        font-size: 16px
+        ;
+    }
+
+    .footer_bottom p{
+        font-size: 16px;
+    }
+
+}
+
+
+
+/* ----------------------------------news section --------------------------------------*/
+
+/* styling for the whole news section */
+.news{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    padding: 0 1.5rem;
+    flex-direction: column;
+}
+
+/* styling for each post */
+.news_post{
+    width: 80%;
+    max-width: 140vh;
+    height: auto;
+    padding: 5rem;
+    background-color: white;
+    box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    margin-bottom: 6vh;
+}
+
+/* double the margin to top */
+.news_post:first-child{
+    margin-top: 6vh;
+}
+
+/* fix the image size */
+.news_post_img{
+    min-width: 15rem;
+    max-width: 15rem;
+    height: 15rem;
+    transform: translateX(-7rem);
+    position: relative;
+}
+
+/* fill the image in the contianer */
+.news_post_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem;
+}
+
+.news_post_img::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0,0,0,0.05);
+    border-radius: 0.8rem;
+}
+
+/* styling for the information */
+.news_post_info{
+    background-color: white;
+    overflow: hidden;
+}
+
+/* date styling */
+.news_post_date span{
+    display: block;
+    color: rgba(0,0,0,0.5);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+/* title styling */
+.news_post_title{
+    font-size: 1.8rem;
+    margin: 0.8rem 0 1.2rem;
+    text-transform: uppercase;
+    color: pink;
+}
+
+/* text styling */
+.news_post_text{
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.7);
+}
+
+/* button styling */
+.news_post_btn{
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: pink;
+    border-radius: 0.8rem;
+    text-decoration: none;
+}
+
+/* hover effect on button, changes color */
+.news_post_btn:hover{
+    background-color: rgb(209, 110, 127);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* changes layout when screen size gets smaller */
+@media screen and (max-width: 1300px){
+    .news_post{
+        max-width: 80rem;
+        width: 90%;
+    }
+    .news_post_img{
+        min-width: 15rem;
+        max-height: 15rem;
+    }
+}
+
+/* changes layout to column, when using mobile screen */
+@media screen and (max-width: 960px){
+    .news_post{
+        padding: 2.5rem;
+        max-width: 70rem;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 8vh;
+    }
+    .news_post:first-child{
+        margin-top: 8vh;
+    }
+    .news_post_img{
+        min-width: 100%;
+        max-height: 100%; 
+        transform: translate(0, -5rem);
+    }
+
+    .news_post_info{
+        margin-top: -5vh;
+    }
+}
+
+/* styling for even more smaller screen */
+@media screen and (max-width: 600px){
+    .news_post{
+        width: 100%;
+        padding: 2.5rem;
+        max-width: 70rem;
+        height: auto;
+        flex-direction: column;
+    }
+    .news_post_img{
+        min-width: 100%;
+        max-height: 100%;
+        transform: translate(0, -5rem);
+    }
+}
+
+
+
+/* ---------------------------------- ganes gallery --------------------------------------*/
+
+/* fill the gallary without margin */
+.gallery{
+    list-style: 2.5;
+    font-family: sans-serif;
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-color: #131313;
+    padding: 5vh 0;
+}
+
+/* center the gallary filter  */
+.gallery .gallery_filter{
+
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* style each fillter item, include all, action, casual, sports and RPG 
+ make it capitalize */
+.gallery .gallery_filter .filter_item{
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+
+/* onclick effect */
+.gallery .gallery_filter .filter_item.active{
+    color: pink;
+    border-color: pink;
+}
+
+/* fix width of the container */
+.gallery .container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* flex display of each row */
+.gallery .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* center the image and with full screen width */
+.gallery_item_inner img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* when in large screen each row has 3 images */
+.gallery .gallery_item{
+    width: calc(100%/3);
+    padding: 20px;
+}
+
+/* animation on the images */
+.gallery .gallery_item_inner img{
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+/* hover effect, scale a bit when mouse on it */
+.gallery .gallery_item_inner img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* images appear animation after filteed */
+.gallery .gallery_item.show{
+    animation: fade_in 0.5s ease;
+}
+
+/* animation detail */
+@keyframes fade_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* hide the filtered items */
+.gallery .gallery_item.hide{
+    display: none;
+}
+
+/* make it two images per row on small screen */
+@media screen and (max-width: 960px){
+    .gallery .gallery_item{
+        font-size: 18px;
+        width: 50%;
+        padding: 24px;
+    }
+    .row{
+        padding: 0 20px;
+    }
+}
+
+/* make it one image per row on even smaller screen */
+@media screen and (max-width: 600px){
+    .gallery .gallery_item{
+        width: 100%;
+    }
+
+    .gallery .gallery_filter .filter_item{
+        margin-bottom: 10px;
+        margin: 0 8px;
+        font-size: 18px;
+    }
+}
+
+/* ---------------------------------- eastward game section --------------------------------------*/
+
+/* whole body background */
+.eastward{
+    background-color: #131313;
+    
+}
+
+/* center the title */
+.eastward .title {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* make the background video at back of the title */
+.eastward .title video{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+/* style the header, center it */
+.eastward h1{
+    position: absolute;
+    font-size: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+    color: white;
+}
+
+/* style the second title */
+.eastward h2{
+    background-color: pink;
+    background-image: linear-gradient(to top, white, pink);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* style the paragraph */
+.eastward p{
+    background-color: rgb(233, 190, 197);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* make it two rows, left and right */
+.eastward .row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* first row takes 40% of the width */
+.eastward .side {
+    flex: 40%;
+    background-color: #131313;
+    padding: 20px;
+}
+
+/* make a border for the video */
+.eastward .side video{
+    width: 100%;
+    border: 2px solid rgb(233, 190, 197);
+    margin-bottom: 1rem;
+}
+
+/* leave some space between header and nevagation bar */
+.eastward .main {   
+    margin-top: 1rem;
+    flex: 60%;
+    background-color: #131313;
+    padding: 20px;
+}
+
+/* let images takes the whole width */
+.eastward .row img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* at smaller screen, mvoe the sidebar to top, display as column */
+@media screen and (max-width: 960px) {
+    .eastward .row {   
+        flex-direction: column;
+    }
+}
+
+/* ---------------------------------- news artical wording section --------------------------------------*/
+
+/* set contents in center and make background pink */
+.animal_crossing {
+    justify-content: center;
+	align-items: center;
+	background-color: pink;
+    font-weight: 300;
+    text-align: center;
+    margin: auto;
+}
+
+/* first introduction section, leave some space to the top and takes 95% of the width */
+.animal_crossing .introduction{
+    background-color: pink;
+    padding-top: 3vh;
+    width: 95vw;
+    border-radius: 5px;
+    font-family: "adelle-sans", sans-serif;
+    margin: auto;
+}
+
+/* header centered, with large size and weight */
+.animal_crossing h1{
+    font-family: "adelle-sans", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+/* paragraph default fontsize, for change_size_button */
+.animal_crossing p{
+    font-family: "adelle-sans", sans-serif;
+    display: block;
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+
+/* styling for second header */
+.animal_crossing h2{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+
+/* at smaller sceen, text takes more width to allow more content */
+/* margen auto to center the text */
+@media screen and (min-width: 480px){
+    .animal_crossing .introduction,
+    .animal_crossing .summary{
+        width: 90vw;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 767px){
+    .animal_crossing .introduction,
+    .animal_crossing .summary{
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 960px){
+    .animal_crossing .introduction,
+    .animal_crossing .summary{
+        width: 960px;
+        margin: auto;
+    }
+}
+
+
+/* ---------------------------------- news artical images section --------------------------------------*/
+
+
+/* styling for the while iamges slider section */
+.animal_crossing .images_container {
+    margin: auto;
+    /* flex display, let all element in center, vertically and horizontally */
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	/* set width to 960, show images slides in large screen display */
+	width: 960px;
+	height: 680px;
+}
+
+.animal_crossing .images_container ul {
+	/* erase the bullet points for list */
+	list-style: none;
+	/* relative position */
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/* flex display  */
+	display: flex;
+	/* average the width */
+	justify-content: space-around;
+	/* flex at the end, defult is top */
+	align-items: flex-end;
+}
+
+/* small images */
+.animal_crossing .images_container ul li {
+	width: 200px;
+	/* pointer cursor */
+	cursor: pointer;
+}
+.animal_crossing .images_container ul li img {
+	width: 100%;
+	/* transparent border, distance between small pictures */
+	border: 5px solid transparent;
+}
+
+
+/* big images in the slider  */
+.animal_crossing .images_container ul .bigImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 570px;
+	/* transparent border, let it match the small pictures */
+	border: 5px solid transparent;
+	/* background route, set no repeat (default repeated) */
+	background: url(../images/animal/1.jpg) no-repeat;
+	/* fill the whole container */
+	background-size: contain;
+	transition: all 0.5s;
+}
+
+/* moving indicator */
+.animal_crossing .images_container ul .frame {
+	position: absolute;
+	left: 0;
+	bottom: 7px;
+	width: 190px;
+	height: 110px;
+	border: 5px solid salmon;
+	pointer-events: none;
+	transition: all 0.5s;
+}
+
+/* create triangle indicator */
+.animal_crossing .images_container ul .frame::before {
+	content: "";
+	position: absolute;
+	top: -19px;
+	/* using calc function to put triangle in middle */
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 15px;
+	background-color: salmon;
+	clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+/* indicator animation */
+.animal_crossing .images_container ul li:nth-child(1):hover ~ .bigImg {
+	background-image: url(../images/animal/1.jpg);
+}
+.animal_crossing .images_container ul li:nth-child(1):hover ~ .frame {
+	left: 0;
+}
+.animal_crossing .images_container ul li:nth-child(2):hover ~ .bigImg {
+	background-image: url(../images/animal/2.jpg);
+}
+.animal_crossing .images_container ul li:nth-child(2):hover ~ .frame {
+	left: 192.5px;
+}
+.animal_crossing .images_container ul li:nth-child(3):hover ~ .bigImg {
+	background-image: url(../images/animal/3.jpg);
+}
+.animal_crossing .images_container ul li:nth-child(3):hover ~ .frame {
+	left: 385px;
+}
+.animal_crossing .images_container ul li:nth-child(4):hover ~ .bigImg {
+	background-image: url(../images/animal/4.jpg);
+}
+.animal_crossing .images_container ul li:nth-child(4):hover ~ .frame {
+	left: 577.5px;
+}
+.animal_crossing .images_container ul li:nth-child(5):hover ~ .bigImg {
+	background-image: url(../images/animal/5.jpg);
+}
+.animal_crossing .images_container ul li:nth-child(5):hover ~ .frame {
+	left: 770px;
+}
+
+
+/* remove small images and indicator, list all the images one by one */
+@media screen and (max-width: 960px){
+    .animal_crossing .images_container{
+        height: auto;
+    }
+    .animal_crossing .images_container ul{
+        position: relative;
+        align-items: center;
+        display: inline-block;
+        top: 0%;
+        left: 0%;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .animal_crossing .images_container ul li{
+        width: 90vw;
+        margin-left: 5vw;
+        margin-bottom: 1vw;
+    }
+
+    .animal_crossing .images_container ul li img{
+        border: none;
+    }
+
+    .animal_crossing .images_container ul .bigImg{
+        visibility: hidden;
+    }
+    .animal_crossing .images_container ul .frame{
+        visibility: hidden;
+    }
+}
+
+
+
+
+/* ---------------------------------- font size changing section (eastward page and animal page) --------------------------------------*/
+
+/* center 3 As to match the style */
+.animal_crossing .fonts_size_changes{
+    text-align: center;
+}
+
+/* put it left ot match the style */
+.eastward .fonts_size_changes{
+    text-align: left;
+}
+
+/* some spaces between each A */
+.fonts_size_changes span{
+    padding-right: 10px;
+}
+
+/* 3 optional sizes */
+.small{
+    font-size: 1em;
+    cursor: pointer;
+}
+.medium{
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.large{
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+
+
+/* ---------------------------------- simple layout for the report --------------------------------------*/
+
+.report{
+    padding-top: 20px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.report .line{
+    width: 100%;
+    border-top: 3px dashed #bbb;
+}
+
+.report h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.report h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.report p{
+    padding-bottom: 20px;
+}
+
+.report img{
+    width: 100%;
+    margin-bottom: 30px;
+}
